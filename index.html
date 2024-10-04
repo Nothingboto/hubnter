@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hubnter</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="app">
+        <div id="signup">
+            <h2>Sign Up</h2>
+            <input type="text" id="username" placeholder="Username">
+            <label>
+                <input type="checkbox" id="rememberMe"> Remember Me
+            </label>
+            <button onclick="signUp()">Sign Up</button>
+        </div>
+        <div id="profile" style="display:none;">
+            <h2 id="profileName"></h2>
+            <button onclick="showUpload()">Upload Video</button>
+            <div id="upload" style="display:none;">
+                <input type="file" id="videoFile" accept="video/*">
+                <input type="text" id="videoTitle" placeholder="Video Title">
+                <button onclick="uploadVideo()">Upload</button>
+            </div>
+            <h3>Liked Videos</h3>
+            <div id="likedVideos"></div>
+        </div>
+        <div id="feed" style="display:none;">
+            <h2>Feed</h2>
+            <div id="videos"></div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
